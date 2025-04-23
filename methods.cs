@@ -21,9 +21,17 @@ namespace asm4
             if (Health < 0)
             {
                 Health = 0;
+                
+            }
+            Console.WriteLine($"{Name} took {damage} damage. Remaining Health: {Health}");
+
+            if (Health == 0)
+            {
+                Console.WriteLine("I have healed myself with the sacred cup of coffee.");
+                Health += 18000;
+                Console.WriteLine($"{Name}'s health is now : {Health}");
             }
 
-            Console.WriteLine($"{Name} took {damage} damage. Remaining Health: {Health}");
         }
     }
 }
